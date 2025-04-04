@@ -23,20 +23,20 @@ end
 --   capabilities = nvlsp.capabilities,
 -- }
 
-lspconfig.pyright.setup({
-  cmd = {"pyright-langserver", "--stdio"},
+lspconfig.pyright.setup {
+  cmd = { "pyright-langserver", "--stdio" },
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
-  filetypes = {"python"},
+  filetypes = { "python" },
   settings = {
     python = {
       analysis = {
         autoSearchPaths = true,
         diagnosticMode = "workspace",
         useLibraryCodeForTypes = true,
-        logLevel = "Error"
+        logLevel = "Error",
       },
       venvPath = "/opt/homebrew/Caskroom/miniconda/base/envs/",
-    }
-  }
-})
+    },
+  },
+}
