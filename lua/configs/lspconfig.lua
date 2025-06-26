@@ -22,6 +22,12 @@ lspconfig.ts_ls.setup {
   capabilities = nvlsp.capabilities,
 }
 
+lspconfig.clangd.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
+
 lspconfig.pyright.setup {
   cmd = { "pyright-langserver", "--stdio" },
   on_attach = nvlsp.on_attach,
