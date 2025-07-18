@@ -22,6 +22,24 @@ lspconfig.ts_ls.setup {
   capabilities = nvlsp.capabilities,
 }
 
+lspconfig.rust_analyzer.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
+
+lspconfig.gleam.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
+
+lspconfig.gopls.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
+
 lspconfig.clangd.setup {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
