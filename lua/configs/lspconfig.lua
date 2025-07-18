@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "ts_ls", "rust_analyzer", "gleam", "gopls", "clangd" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -15,36 +15,6 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
-
-lspconfig.ts_ls.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-}
-
-lspconfig.rust_analyzer.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-}
-
-lspconfig.gleam.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-}
-
-lspconfig.gopls.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-}
-
-lspconfig.clangd.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-}
 
 lspconfig.pyright.setup {
   cmd = { "pyright-langserver", "--stdio" },
