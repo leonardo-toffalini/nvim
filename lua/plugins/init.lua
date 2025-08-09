@@ -14,6 +14,37 @@ return {
   },
 
   {
+    "stevearc/oil.nvim",
+    opts = {},
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    lazy = false,
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    enabled = false,
+  },
+
+  {
+    "mason-org/mason.nvim",
+    cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+    opts = {
+      ensure_installed = {
+        "clangd",
+        "css-lsp",
+        "gopls",
+        "html-lsp",
+        "lua-language-server",
+        "pyright",
+        "ruff",
+        "rust-analyzer",
+        "stylua",
+        "typescript-language-server",
+      },
+    },
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
@@ -22,6 +53,14 @@ return {
         "vimdoc",
         "html",
         "css",
+        "c",
+        "cpp",
+        "python",
+        "rust",
+        "gleam",
+        "go",
+        "javascript",
+        "typescript",
       },
     },
   },

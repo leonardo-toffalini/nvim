@@ -1,10 +1,9 @@
 require "nvchad.options"
 
--- add yours here!
-
 local o = vim.o
 -- o.cursorlineopt = "both" -- to enable cursorline!
 o.relativenumber = true
+o.swapfile = false
 
 vim.api.nvim_create_autocmd("BufDelete", {
   callback = function()
