@@ -4,6 +4,7 @@ local o = vim.o
 -- o.cursorlineopt = "both" -- to enable cursorline!
 o.relativenumber = true
 o.swapfile = false
+o.scrolloff = 5
 
 vim.api.nvim_create_autocmd("BufDelete", {
   callback = function()
